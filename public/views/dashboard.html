@@ -1,0 +1,16 @@
+<nvd3 id="graph" style="width:100%; height:500px;"options="dashboard.options" data="dashboard.data"></nvd3>
+ 
+<table class="table">
+  <tr>
+    <th>Day</th>
+    <th>Score</th>
+    <th>Comment</th>
+
+  </tr>
+  <tr ng-repeat="item in dashboard.scores">
+    <td> {{ item.date }} </td>
+    <td> {{ item.score }} </td>
+    <td> {{ item.comment }} </td>
+
+
+</table>
