@@ -25,8 +25,6 @@ var opts = {
     }
 };
 
-// console.log(credentials.mongo);
-// var DBURL = 'mongodb://localhost:27017/';
 var DBURL = credentials.mongo.connectionString;
 var User = require('./models/users');
 
