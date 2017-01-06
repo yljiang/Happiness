@@ -4,7 +4,6 @@ var api = require('./routes/api');
 var credentials = require('./credentials.js');
 var handlebars = require('express-handlebars');
 
-
 var app = module.exports = express();
 var env = app.get('env');
 
@@ -15,8 +14,6 @@ app.set('view engine', 'handlebars');
 app.use(require('cookie-parser')());
 app.use(require('body-parser').json());
 app.use(require('body-parser').urlencoded({ extended: true }));
-
-
 
 //////////////////////////////////
 ////////Configure MONGO DB

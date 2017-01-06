@@ -21,8 +21,10 @@ api.get('/api/scores', function(req, res){
 });
 
 api.post('/api/scores', function(req, res){
+    console.log("date: " + req.body.date);
     var body = {
         date : req.body.date,
+        epoch : new Date(req.body.date).getTime(),
         score: req.body.score,
         comment: req.body.comment,
     };
