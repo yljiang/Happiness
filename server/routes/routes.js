@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var api = require('./api');
-var dbs = require('../lib/service')();
+var dbs = require('../services/mongo')();
 router.use(api);
 
 router.get('/', function(req, res){

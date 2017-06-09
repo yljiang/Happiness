@@ -1,5 +1,5 @@
 // var cors = require('cors');
-var dbs = require('../lib/service')();
+var dbs = require('../services/mongo')();
 
 var express = require('express');
 var api = express.Router();

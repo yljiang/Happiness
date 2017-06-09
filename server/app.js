@@ -1,7 +1,7 @@
 var express = require('express');
 var routes = require('./routes/routes');
 var api = require('./routes/api');
-var credentials = require('./credentials.js');
+var credentials = require('./config/credentials.js');
 var handlebars = require('express-handlebars');
 
 var app = module.exports = express();
@@ -65,7 +65,7 @@ app.use(require('express-session')({
 //////////////////////////////////
 ////////Authentications
 ///////////////////////////////////
-var auth = require('./lib/auth.js')(app, {
+var auth = require('./services/auth.js')(app, {
     providers:credentials.authProviders,
     successRedirect: '/dashboard',
     failtureRedirect: '/unauthorized',
